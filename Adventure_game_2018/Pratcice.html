@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Notes</title>
+    </head>
+    <body>
+        <h1>Space Invaders V1.o</h1>
+        <p>Made by: Treydon Ronald Cook</p>
+        <script>
+            
+            var bread = prompt("How many pieces of bread do you want to toast?");
+            
+            toaster(bread);
+            
+            function toaster(slot){
+            
+                alert(slot + "all pieces of toast are done");
+            }
+            
+            //alert("Robot: 'ding fries are done' ");
+            //confirm("Robot: 'Are you going yo eat those fries?' ");
+            //prompt("Robot: 'how did you like your fries?' ");
+            //alert("Robot: 'you did not get frie sauce!' ");
+            //confirm("Robot: 'would you like some?' ");
+            //prompt("Robot: 'here you go!' ");
+            //alert("Robot: 'you'r burger is done!' ");
+            //confirm("Robot: 'whould you like anything else?' ");
+            //prompt("Robot: 'come again!' ");
+            
+            // comment
+            
+            /* 1
+                2
+                3
+                3
+                */
+            
+            /* alert("Robot: 'ding fries are done' ");
+            confirm("Robot: 'Are you going yo eat those fries?' ");
+            prompt("Robot: 'how did you like your fries?' ");
+            alert("Robot: 'you did not get frie sauce!' ");
+            confirm("Robot: 'would you like some?' ");
+            prompt("Robot: 'here you go!' ");
+            alert("Robot: 'you'r burger is done!' ");
+            confirm("Robot: 'whould you like anything else?' ");
+            prompt("Robot: 'come again!' ");
+            */
+            
+            /*var favColor = "Red";
+            
+            var favFood = "Pizza";
+            
+            var facNumber = 10;
+            
+            var percent = 0.25; 
+            
+            var favColor = prompt("What is your favorite color?");
+            
+            if(favColor == "blue" || favColor == "Blue" )
+            
+           var favColor = prompt("What is your favorite color?").toLowerCase();
+            
+             if(favColor == "blue"){
+                alert("blue is the color of your face as the air leaves you body!");
+            }
+            else if(favColor == "green"){
+                alert("green is the color of grass!");
+            }
+            else if(favColor == "yellow"){
+                alert("yellow is the color of your pants when I am done with you!");
+            }
+            else if(favColor == "orange"){
+                alert("orange is the color of citrus!");
+            }
+            else if(favColor == "purple"){
+                alert("purple is the color of your face as I strangle you if I had arms and hands !");
+            }
+            else if(favColor == "red"){
+                alert("Red is the color of love!");
+            }
+            else if(favColor == "blue"){
+                alert("blue is the color of your face as the air leaves you body!");
+            else{
+                alert("That is not a color!!!");
+            }
+            
+            var favColor = prompt("What is your is you'r favorit color")
+            */
+            
+            var global;
+            
+            function village(){
+                var local;
+                   
+            }
+            
+            // Inventory System
+            var inventory = {
+                sword:0,
+                bread:0,
+                meat:0,
+                fish:0,
+                goldkey:0,
+            }
+            
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Adventure Game</title>
+    </head>
+    <body>
+        <h1>Adventure Game v1.0</h1>
+        <p>Made by: Treydon Ronald Cook</p>
+        <script>
+            // Javascript object for an inventory
+            var inventory = {
+                coins:150,
+                bread:5,
+                sword:0,
+            }
+            
+            
+            start();
+            
+            function start(){
+                
+                var playerName = prompt("What is you'r name traveller?");
+                
+                alert("Welcome to wild west" + playerName);
+                
+                var startGame = confirm("Are you ready to begin you'r adventure?");
+                
+                    if(startGame){
+                        
+                    }
+                    else{
+                        alert("Goodbye!");
+                    }
+                
+            }
+            
+            function Village();
+                var village = prompt("You arrive at a small village. There is a blacjsmith, inn, stable, tavern, jail, church, and several wooden homes").tolowerCase();
+            
+            switch(village){
+                    
+                case "blacksmith";
+                    alert("The blacksmith scowls at you and mumbles something rude! You walk away intimidated.");
+                    
+                    var blacksmith = prompt("What do you want to buy? \n-sword \n-shield \n-armor");
+                        if(blacksmith == "sword" || blacksmith == "buy sword" && inventory.coins >= 100){
+                            // Adds sword +1
+                            inventory.sword ++;
+                            // displays swords owned
+                            alert("you own " +inventory.sword+"sword");
+                            // Takes money out of account for sword
+                            inventory.coins = inventory.coins - 100;
+                            // display coins left 
+                            alert("You have "+inventory.coins+" coins remaining");
+                          }
+                    
+                    inventory.sword ++;
+                    alert("swords = "+inventory.sword);
+                    village();
+                break;
+                case "inn":
+                    alert("You enter the old weather torn inn. The innkeeper asks what he can do for you? Rent a room. Buy food. Sit by the hearth fire.");
+                    village();
+                break;
+                case "stable":
+                    alert("The stable master informs you that all of the horses have been stolen last night. He asks you for your help?");
+                    village();
+                case "tavern":
+                    alert("The tavern man asks if you want a drink?");
+                    village();
+                break;
+                case "jail":
+                    alert("The sherif he says hello to you and says we are a bit short handed would yo like to be a deputy?");
+                    village;
+                break;
+                case "church":
+                    alert("A man walks out the door's of the church he sees you, greating Travler I am father Falcone of this nice little town, what can I do for you?");
+                    village;
+                break;
+                case "wooden houses":
+                    alert("they do not to be rich people and by the looks of it it seems they can barly get by.");
+                    village;
+                break;
+        
+        </script>
+    </body>
+    
+    
+    
+    
+    // this is to accasre the inentory anytime you will need "invList();" in the code to acces it at the end of it on the next line it needs a fall back and that would be "Village();" at the end of a varibel.
+    var invList = function(){
+        alert("Coins = "+ inentory.coins + 
+              "\nRuby Slippers ="+ inventory.rubyslippers);
+    }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Adventure_Game</title>
+    </head>
+    <body>
+        <h1>Adventure_Game v1.0</h1>
+        <p>Made by: Treydon Ronald Cook</p>
+        <script>
+            // Javascript object for an inventory
+            var inventory = {
+                coins:150,
+                bread:5,
+                gun:0,
+            }
+            
+            
+            start();
+            
+            function start(){
+                
+                var playerName = prompt("What is you'r name traveller?");
+                
+                alert("Welcome to the wild Space" + playerName);
+                
+                var startGame = confirm("Are you ready to begin you'r adventure?");
+                
+                    if(startGame){
+                        
+                    }
+                    else{
+                        alert("Goodbye!");
+                    }
+                
+            }
+            
+            function Space_Station(){
+                var Station = prompt("You arrive at a large space station. There is a gunsmith, bar, security station, lanch pad, brig, shoping area, and several homes").tolowerCase();
+            
+            switch(Space_Station){
+                    
+                case "Gunsmith":
+                    alert("The Gunsmith scowls at you and mumbles something rude! You walk away intimidated.");
+                    var Gunsmith = prompt("What do you want to buy? \n-rifle \n-energy shield \n-armor \n-pistol \n-ammo.");
+                        if(Gunsmith == "rifle" || Gunsmith == "buy rifle" && inventory.coins >= 100){
+                            // Adds gun +1
+                            inventory.rifle ++;
+                            // displays guns owned
+                            alert("you own " +inventory.gun+"rifle");
+                            // Takes money out of account for gun
+                            inventory.coins = inventory.coins - 100;
+                            // display coins left 
+                            alert("You have"+inventory.coins+"coins remaining");
+                          }
+                    }
+                    
+                    inventory.gun ++;
+                    alert("rifle = "+inventory.gun);
+                    Space_Station()
+                break;
+                case "Lanch_Pad":
+                    alert("you reach a blast door saying only maintance workers and security are only allowed beyond this point.");
+                    Space_Station()
+                break;
+                case "Security_Station":
+                    alert("As you walk in to the security station there men and women in black security uniforms walking around you hear a women calling to you.");
+                    Space_Station()
+                case "Bar":
+                    alert("you walk in to the bar the sound of music is so loud you can't hear anything else. The bar man asks if you want a drink?");
+                    Space_Station()
+                break;
+                case "Brig":
+                    alert("The brig is next to the security station as you watch men and women of all races coming and going.");
+                    Space_Station()
+                break;
+                case "Shoping_Area":
+                    alert("As you walk aaround you find food joints, clothes, companys.");
+                    Space_Station()
+                break;
+                case "Houses":
+                    alert("There are so meany homes that you can't keep count of them.");
+                    Space-Station()
+                break;
+                }
+            }
+        </script>
+    </body>
+</html>
